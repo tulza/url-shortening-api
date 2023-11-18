@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "./style/styles.css";
+import HomePage from "./component/HomePage";
 
 function App() {
   return (
     <>
-      <div className="flex justify-center align-middle">
-        <h1> thisa template</h1>
-      </div>
+      <HomePage />
     </>
   );
 }
