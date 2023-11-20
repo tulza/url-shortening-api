@@ -15,7 +15,7 @@ const ShortenItBar = () => {
       />
       <input
         type="button"
-        className="py-2 px-6 text-white bg-sing-up hover:bg-sing-up-hover z-10 mr-10 h-[60px] rounded-[16px]"
+        className="rounded-[16px] font-bold py-2 px-6 text-white bg-sing-up hover:bg-sing-up-hover z-10 mr-10 h-[60px] rounded-[16px]"
         value="Shorten It!"
       />
     </div>

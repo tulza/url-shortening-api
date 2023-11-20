@@ -7,8 +7,8 @@ const AspectBox = ({ aspectLabel, details, imgUrl }) => {
         <img src={imgUrl} className="w-[40px] h-[40px]"></img>
       </div>
 
-      <p className="font-bold text-[20px]">{aspectLabel}</p>
-      <p className="pt-2 pb-4 text-[15px]">{details}</p>
+      <p className="font-bold text-[20px] text-large-text">{aspectLabel}</p>
+      <p className="pt-2 pb-4 text-[15px] text-small-text">{details}</p>
     </div>
   );
 };
@@ -16,15 +16,17 @@ const AspectBox = ({ aspectLabel, details, imgUrl }) => {
 const StatisticContainer = () => {
   return (
     <>
-      <div className="flex flex-col text-center">
-        <p className="font-bold text-[48px]">Advanced Statistics</p>
+      <div className="flex flex-col text-center py-16">
+        <p className="font-bold text-[48px] text-large-text">
+          Advanced Statistics
+        </p>
         <p className="text-[16px]">
           Track how your links are performing across the web with our advanced
           statistics dashboard.
         </p>
       </div>
       <div>
-        <div className="flex relative items-center justify-center py-[100px]">
+        <div className="flex relative items-center justify-center py-16 pb-32 ">
           <div className="bg-grid-line h-[8px] w-[75%] absolute" />
           <div id="statistic-grid" className="z-10">
             <AspectBox

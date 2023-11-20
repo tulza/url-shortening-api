@@ -16,7 +16,7 @@ const HomePage = () => {
           <PageIntro />
         </div>
       </div>
-      <div className=" center-web bg-[#f0f0f0] w-full">
+      <div className=" center-web bg-statistics w-full">
         <div className="section-container">
           <ShortenItBar />
           <StatisticContainer />
@@ -25,7 +25,7 @@ const HomePage = () => {
       <div className=" center-we w-full">
         <DockBottom />
       </div>
-      <div className=" center-web bg-bg4 w-full">
+      <div className="flex flex-1 center-web bg-bg4 w-full ">
         <div className="section-container">
           <FooterLinks />
         </div>

@@ -15,14 +15,14 @@ const Button = ({ label }) => {
 const Navigation = () => {
   return (
     <div className="flex flex-row">
-      <img src="../resources/images/logo.svg" className="h-full m-1" />
+      <img src="../resources/images/logo.svg" className="h-full m-auto pr-8" />
       <div className="w-full flex justify-between">
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row items-center gap-4">
           <Button label="Features" />
           <Button label="Pricing" />
           <Button label="Resources" />
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row items-center ">
           <Button label="Login" />
           <a href="#" className="button">
             Sign up

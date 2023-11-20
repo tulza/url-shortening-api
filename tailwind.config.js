@@ -16,10 +16,11 @@ export default {
         "shorten-link-box": "hsl(257, 27%, 26%)",
         white: "#fff",
 
-        bg1: "hsl(0, 0%, 95%)",
-        bg2: "hsl(257, 7%, 63%)",
-        bg3: "hsl(255, 11%, 22%)",
+        statistics: "rgb(240,241,246)",
         bg4: "hsl(260, 8%, 14%)",
+
+        "large-text": "hsl(255, 11%, 22%)",
+        "small-text": "hsl(257, 7%, 63%)",
       },
     },
   },

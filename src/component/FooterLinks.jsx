@@ -3,7 +3,7 @@ import React from "react";
 const FooterLinks = () => {
   return (
     <>
-      <div className="grid grid-cols-[33%_50%_auto] py-10 w-full">
+      <div className="grid grid-cols-[33%_50%_auto] py-10 w-full h-full">
         <img src="../resources/images/logo-white.svg" className="h-33" />
         <div id="footer-links">
           <div>
@@ -32,7 +32,7 @@ const FooterLinks = () => {
             className="h-[24px]"
           />
           <img
-            src="../resources/images/icon-twitter.svg"
+            src="../.././resources\images\icon-twitter.svg"
             className="h-[24px]"
           />
           <img
