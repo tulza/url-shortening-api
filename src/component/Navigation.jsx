@@ -15,7 +15,7 @@ const Button = ({ label }) => {
 const Navigation = () => {
   return (
     <div className="flex flex-row">
-      <img src="../resources/images/logo.svg" className="h-full m-auto pr-8" />
+      <img src="/images/logo.svg" className="h-full m-auto pr-8" />
       <div className="w-full flex justify-between">
         <div className="flex flex-row items-center gap-4">
           <Button label="Features" />

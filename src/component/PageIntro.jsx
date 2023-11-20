@@ -16,7 +16,10 @@ const PageIntro = () => {
             Get Started
           </a>
         </div>
-        <img src="../../resources/images/illustration-working.svg"></img>
+        <img
+          src="/images/illustration-working.svg"
+          className="translate-x-[30%]"
+        ></img>
       </div>
     </>
   );

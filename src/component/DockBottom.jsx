@@ -4,7 +4,7 @@ const DockBottom = () => {
   return (
     <div className="flex justify-center py-8 flex-col items-center relative w-full overflow-hidden">
       <img
-        src="../../resources/images/bg-shorten-desktop.svg"
+        src="/images/bg-shorten-desktop.svg"
         className="bg-shorten-link-box h-full w-full absolute"
       />
       <p className="z-10 text-white font-bold text-[40px] py-4">

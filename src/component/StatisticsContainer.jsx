@@ -30,20 +30,20 @@ const StatisticContainer = () => {
           <div className="bg-grid-line h-[8px] w-[75%] absolute" />
           <div id="statistic-grid" className="z-10">
             <AspectBox
-              imgUrl="../../resources/images/icon-brand-recognition.svg"
+              imgUrl="/images/icon-brand-recognition.svg"
               aspectLabel="Brand Recognition"
               details="Boost your brand recognition with each click. Generic links don’t 
   mean a thing. Branded links help instil confidence in your content."
             />
             <AspectBox
-              imgUrl="../../resources/images/icon-detailed-records.svg"
+              imgUrl="/images/icon-detailed-records.svg"
               aspectLabel="Detailed Records"
               details="Gain insights into who is clicking your links. Knowing when and where 
   people engage with your content helps inform better decisions.
 "
             />
             <AspectBox
-              imgUrl="../../resources/images/icon-fully-customizable.svg"
+              imgUrl="/images/icon-fully-customizable.svg"
               aspectLabel="Fully Customizable"
               details="Improve brand awareness and content discoverability through customizable 
   links, supercharging audience engagement."
