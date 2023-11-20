@@ -15,6 +15,11 @@ export default {
         "stats-logo": "hsl(257, 27%, 26%)",
         "shorten-link-box": "hsl(257, 27%, 26%)",
         white: "#fff",
+
+        bg1: "hsl(0, 0%, 95%)",
+        bg2: "hsl(257, 7%, 63%)",
+        bg3: "hsl(255, 11%, 22%)",
+        bg4: "hsl(260, 8%, 14%)",
       },
     },
   },
