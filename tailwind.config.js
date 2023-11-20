@@ -3,7 +3,20 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
 
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "nav-button": "hsl(0, 0%, 75%)",
+        "nav-button-hover": "hsl(257, 7%, 63%)",
+
+        "sing-up": "hsl(180, 66%, 49%)",
+        "sing-up-hover": "hsl(180, 66%, 70%)",
+
+        "grid-line": "hsl(180, 66%, 49%)",
+        "stats-logo": "hsl(257, 27%, 26%)",
+        "shorten-link-box": "hsl(257, 27%, 26%)",
+        white: "#fff",
+      },
+    },
   },
   plugins: [],
 };
