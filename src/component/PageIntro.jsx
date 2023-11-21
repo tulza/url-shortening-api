@@ -1,4 +1,5 @@
 import React from "react";
+import workingIllusSvg from "/images/illustration-working.svg";
 
 const PageIntro = () => {
   return (
@@ -16,10 +17,7 @@ const PageIntro = () => {
             Get Started
           </a>
         </div>
-        <img
-          src="/images/illustration-working.svg"
-          className="translate-x-[30%]"
-        ></img>
+        <img src={workingIllusSvg} className="translate-x-[30%]"></img>
       </div>
     </>
   );

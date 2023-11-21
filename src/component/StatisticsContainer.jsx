@@ -1,4 +1,7 @@
 import React from "react";
+import recognitionIcon from "/images/icon-brand-recognition.svg";
+import recordsIcon from "/images/icon-detailed-records.svg";
+import customizableIcon from "/images/icon-fully-customizable.svg";
 
 const AspectBox = ({ aspectLabel, details, imgUrl }) => {
   return (
@@ -30,20 +33,20 @@ const StatisticContainer = () => {
           <div className="bg-grid-line h-[8px] w-[75%] absolute" />
           <div id="statistic-grid" className="z-10">
             <AspectBox
-              imgUrl="/images/icon-brand-recognition.svg"
+              imgUrl={recognitionIcon}
               aspectLabel="Brand Recognition"
               details="Boost your brand recognition with each click. Generic links don’t 
   mean a thing. Branded links help instil confidence in your content."
             />
             <AspectBox
-              imgUrl="/images/icon-detailed-records.svg"
+              imgUrl={recordsIcon}
               aspectLabel="Detailed Records"
               details="Gain insights into who is clicking your links. Knowing when and where 
   people engage with your content helps inform better decisions.
 "
             />
             <AspectBox
-              imgUrl="/images/icon-fully-customizable.svg"
+              imgUrl={customizableIcon}
               aspectLabel="Fully Customizable"
               details="Improve brand awareness and content discoverability through customizable 
   links, supercharging audience engagement."

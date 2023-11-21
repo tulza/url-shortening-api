@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import bgShortenDesktop from "/images/bg-shorten-desktop.svg";
 
 const copyToClipboard = (link) => {
   navigator.clipboard.writeText(link);
@@ -20,7 +21,9 @@ const NewLinkBox = ({ original, newLink }) => {
           type="button"
           className={clsx(
             "transition-bg ml-4 py-2 px-8 rounded-[8px] text-white",
-            copied ? "bg-fetching" : "bg-sing-up hover:bg-sing-up-hover "
+            copied
+              ? "bg-fetching"
+              : "bg-sing-up cursor-pointer hover:bg-sing-up-hover  "
           )}
           onClick={() => {
             setcopied(true);
@@ -37,7 +40,7 @@ const NewLinkBox = ({ original, newLink }) => {
 };
 
 const ShortenItBar = () => {
-  const [inputLink, setLink] = useState("https://www.youtube.com/");
+  const [inputLink, setLink] = useState("");
   const [urlBlock, setUrlBlock] = useState(new Array());
   const [isFetching, setIsFetching] = useState(false);
 
@@ -75,10 +78,7 @@ const ShortenItBar = () => {
   return (
     <>
       <div className="relative flex items-center gap-4 h-[150px] rounded-[16px] translate-y-[-50%] overflow-hidden">
-        <img
-          src="/images/bg-shorten-desktop.svg"
-          className="bg-shorten-link-box absolute"
-        />
+        <img src={bgShortenDesktop} className="bg-shorten-link-box absolute" />
         <input
           type="input"
           className="z-10 h-[60px] w-[100%] ml-10 pl-4 rounded-[16px]"
