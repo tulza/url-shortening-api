@@ -2,16 +2,36 @@ import clsx from "clsx";
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
+const copyToClipboard = (link) => {
+  navigator.clipboard.writeText(link);
+};
+
 const NewLinkBox = ({ original, newLink }) => {
+  const [copied, setcopied] = useState(false);
+
   return (
     <div className="flex justify-between rounded-[16px] items-center py-4 px-6 translate-y-[-75px] mt-4 bg-white">
       <a href={original}>{original}</a>
-      <a href={newLink} className="text-sing-up">
-        {newLink}
-        <button className="ml-4 py-2 px-8 rounded-[8px] text-white bg-sing-up hover:bg-sing-up-hover ">
-          Copy
-        </button>
-      </a>
+      <div>
+        <a href={newLink} className="text-sing-up">
+          {newLink}
+        </a>
+        <input
+          type="button"
+          className={clsx(
+            "transition-bg ml-4 py-2 px-8 rounded-[8px] text-white",
+            copied ? "bg-fetching" : "bg-sing-up hover:bg-sing-up-hover "
+          )}
+          onClick={() => {
+            setcopied(true);
+            copyToClipboard(newLink);
+            setTimeout(() => {
+              setcopied(false);
+            }, 500);
+          }}
+          value={copied ? "Copied" : "Copy"}
+        />
+      </div>
     </div>
   );
 };
