@@ -17,7 +17,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className=" center-web bg-statistics w-full">
-        <div className="section-container">
+        <div className="section-container ">
           <ShortenItBar />
           <StatisticContainer />
         </div>

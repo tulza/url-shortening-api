@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FooterLinks from "./FooterLinks";
+import { v4 as uuidv4 } from "uuid";
 
 const LinkBox = ({ original, newLink }) => {
   return (
@@ -17,9 +17,10 @@ const LinkBox = ({ original, newLink }) => {
 
 const ShortenItBar = () => {
   const [inputLink, setLink] = useState("https://www.youtube.com/");
-  const [urlBlock, setUrlBlock] = useState([]);
+  const [urlBlock, setUrlBlock] = useState(new Array());
 
-  const CallApi = (link) => {
+  // handleAPI
+  const handleShortenAPI = (link) => {
     fetch("https://corsproxy.io/?https://cleanuri.com/api/v1/shorten", {
       method: "POST",
       headers: {
@@ -29,7 +30,10 @@ const ShortenItBar = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        setUrlBlock(urlBlock + [data.result_url]);
+        console.log(data.result_url);
+        setUrlBlock(
+          urlBlock.concat([{ original: link, new: data.result_url }])
+        );
         console.log(urlBlock);
       });
   };
@@ -50,10 +54,16 @@ const ShortenItBar = () => {
           type="button"
           className="rounded-[16px] font-bold py-2 px-6 text-white bg-sing-up hover:bg-sing-up-hover z-10 mr-10 h-[60px] rounded-[16px]"
           value="Shorten It!"
-          onclick={() => {CallApi(link)}}
+          onClick={() => {
+            handleShortenAPI(inputLink);
+          }}
         />
       </div>
-      <LinkBox original="youtube.com" newLink="https://cleanuri.com/x9lZzk" />
+      {urlBlock.map((url) => {
+        return (
+          <LinkBox original={url.original} newLink={url.new} key={uuidv4()} />
+        );
+      })}
     </>
   );
 };
