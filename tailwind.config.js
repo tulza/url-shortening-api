@@ -10,6 +10,7 @@ export default {
 
         "sing-up": "hsl(180, 66%, 49%)",
         "sing-up-hover": "hsl(180, 66%, 70%)",
+        fetching: "hsl(180, 66%, 10%)",
 
         "grid-line": "hsl(180, 66%, 49%)",
         "stats-logo": "hsl(257, 27%, 26%)",

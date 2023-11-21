@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
@@ -22,6 +23,11 @@ const ShortenItBar = () => {
 
   // handleAPI
   const handleShortenAPI = (link) => {
+    if (!link) {
+      setIsFetching(false);
+      return "Please add a link";
+    }
+
     fetch("https://corsproxy.io/?https://cleanuri.com/api/v1/shorten", {
       method: "POST",
       headers: {
@@ -31,7 +37,7 @@ const ShortenItBar = () => {
     })
       .then((response) => {
         if (!response.ok) {
-          return Promise.reject();
+          throw "invalid link";
         }
         return response.json();
       })
@@ -64,7 +70,12 @@ const ShortenItBar = () => {
         />
         <input
           type="button"
-          className="rounded-[16px] font-bold py-2 px-6 text-white bg-sing-up hover:bg-sing-up-hover z-10 mr-10 h-[60px] cursor-pointer"
+          className={clsx(
+            "transition-bg rounded-[16px] font-bold py-2 px-6 text-white z-10 mr-10 h-[60px] ",
+            isFetching
+              ? "bg-fetching"
+              : "bg-sing-up hover:bg-sing-up-hover cursor-pointer"
+          )}
           value={isFetching ? "Fetching" : "Shorten It!"}
           onClick={() => {
             if (isFetching == false) {

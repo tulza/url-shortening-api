@@ -9,6 +9,7 @@
 
 body {
   height: 0;
+  width: 100%;
 }
 #root {
   display: flex;
@@ -42,8 +43,12 @@ body {
 #footer-links h3 {
   @apply text-[12px] pb-2;
 }
-#footer-links p {
-  @apply font-normal leading-6 text-[12px] text-small-text;
+#footer-links a {
+  @apply block font-normal leading-6 text-[12px] text-small-text;
+}
+
+.transition-bg {
+  transition: background-color 0.2s;
 }
 
 .section-container {
