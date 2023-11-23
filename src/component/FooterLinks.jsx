@@ -8,8 +8,8 @@ import instagramIcon from "/images/icon-instagram.svg";
 const FooterLinks = () => {
   return (
     <>
-      <div className="grid grid-cols-[33%_50%_auto] py-10 w-full h-full">
-        <img src={whiteShortly} className="h-33" />
+      <div className="grid desktop:grid-cols-[33%_50%_auto] py-10 w-full h-full mob:justify-center mob:text-center">
+        <img src={whiteShortly} className="h-33 mob:m-auto mob:pb-6" />
         <div id="footer-links">
           <div>
             <h3>Features</h3>
@@ -31,7 +31,7 @@ const FooterLinks = () => {
             <a href="">Contact </a>
           </div>
         </div>
-        <div className="flex gap-4 justify-end">
+        <div className="flex gap-4 justify-end mob:pt-6">
           <img src={facebookIcon} className="h-[24px]" />
           <img src={twitterIcon} className="h-[24px]" />
           <img src={pinterestIcon} className="h-[24px]" />

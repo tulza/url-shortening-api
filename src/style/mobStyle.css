@@ -21,4 +21,7 @@
   #statistic-grid {
     @apply grid grid-cols-1 gap-7 p-6 text-center;
   }
+  #footer-links {
+    @apply grid grid-cols-1 gap-8 font-bold text-white text-[14px];
+  }
 }
