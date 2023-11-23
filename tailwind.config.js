@@ -11,6 +11,7 @@ export default {
       transitionProperty: {
         height: "height",
         width: "width",
+        colors: "color",
       },
 
       colors: {
@@ -19,12 +20,12 @@ export default {
         "Dark-Violet": "hsl(257, 27%, 26%)",
         Red: "hsl(0, 87%, 67%)",
         Gray: "hsl(0, 0%, 75%)",
-        "Grayish-Violet": "hsl(257, 7%, 63%)",
+        "Grayish-Violet": "c",
         "Very-Dark-Blue": "hsl(255, 11%, 22%)",
         "Very-Dark-Violet": "hsl(260, 8%, 14%)",
 
-        "nav-button": "hsl(0, 0%, 75%)",
-        "nav-button-hover": "hsl(257, 7%, 63%)",
+        "nav-button": "hsl(257, 7%, 63%)",
+        "nav-button-hover": "hsl(255, 11%, 22%)",
 
         "sing-up": "hsl(180, 66%, 49%)",
         "sing-up-hover": "hsl(180, 66%, 70%)",

@@ -7,7 +7,10 @@ const Button = ({ label }) => {
   return (
     <>
       <div className="nav-links">
-        <a href="#" className="text-nav-button hover:text-nav-button-hover">
+        <a
+          href="#"
+          className="text-nav-button hover:text-nav-button-hover transition-[color] duration-200"
+        >
           {label}
         </a>
       </div>
@@ -19,7 +22,7 @@ const NavDesktop = () => {
   return (
     <>
       <div className="w-full flex justify-between desktop-only">
-        <div className="flex flex-row items-center gap-4">
+        <div className="flex flex-row items-center ">
           <Button label="Features" />
           <Button label="Pricing" />
           <Button label="Resources" />

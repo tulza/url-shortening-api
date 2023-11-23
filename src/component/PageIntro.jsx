@@ -19,7 +19,7 @@ const PageIntro = () => {
         </div>
         <img
           src={workingIllusSvg}
-          className="translate-x-[30%] mob:translate-x-[20%] mob:scale-[1.5] mob:py-16"
+          className="translate-x-[30%] mob:translate-x-[20%] pb-16 scale-[1.5] mob:py-16"
           alt="person working illustration SVG"
         />
       </div>
