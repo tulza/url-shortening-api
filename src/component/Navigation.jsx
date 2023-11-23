@@ -46,9 +46,9 @@ const NavMoblie = ({ isToggled }) => {
           )}
         >
           <div className="absolute w-[375px] flex flex-col items-center gap-[34px] p-8 text-white">
-            <a>Features</a>
-            <a>Pricing</a>
-            <a>Resources</a>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Resources</a>
             <div className="bg-Grayish-Violet h-[1px] w-full" />
             <p>Login</p>
             <button className="button w-full">Sign Up</button>
