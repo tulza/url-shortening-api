@@ -5,7 +5,7 @@ const PageIntro = () => {
   return (
     <>
       <div id="intro">
-        <div className="">
+        <div className="mob:flex flex-col items-center">
           <h1 className="mob-center font-bold text-[72px] mob:text-[48px] leading-[80px] mob:leading-[60px] text-large-text">
             More than just shorter links
           </h1>
@@ -14,14 +14,14 @@ const PageIntro = () => {
             links are performing.
           </p>
           <div className="flex mob:justify-center">
-            <button href="#" className="button ">
+            <button href="#" className="button mob:px-10">
               Get Started
             </button>
           </div>
         </div>
         <img
           src={workingIllusSvg}
-          className="translate-x-[30%] mob:translate-x-[15%] "
+          className="translate-x-[30%] mob:translate-x-[20%] mob:scale-[1.5] mob:py-16"
         />
       </div>
     </>

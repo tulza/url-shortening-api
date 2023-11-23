@@ -26,12 +26,34 @@ body {
 #statistic-grid {
   @apply grid grid-cols-3 gap-7;
 }
-
+#statistic-grid .Aspect-box {
+  transition: 1s;
+  transition-property: transform box-shadow;
+}
 #statistic-grid .Aspect-box:nth-child(1) {
   transform: translateY(-50px);
 }
 #statistic-grid .Aspect-box:nth-child(3) {
   transform: translateY(50px);
+}
+
+#statistic-grid .Aspect-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 30px -15px hsl(257, 27%, 26%);
+}
+#statistic-grid .Aspect-box .StatImage {
+  transition: 1s;
+}
+#statistic-grid .Aspect-box:hover .StatImage {
+  transform: translateY(-50px);
+  box-shadow: 0px 10px 30px -15px hsl(257, 27%, 26%);
+}
+
+#statistic-grid .Aspect-box:nth-child(1):hover {
+  transform: translateY(-60px);
+}
+#statistic-grid .Aspect-box:nth-child(3):hover {
+  transform: translateY(40px);
 }
 
 .new-link-box {

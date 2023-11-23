@@ -6,7 +6,7 @@ import customizableIcon from "/images/icon-fully-customizable.svg";
 const AspectBox = ({ aspectLabel, details, imgUrl }) => {
   return (
     <div className="Aspect-box bg-white px-6 pb-4 rounded-lg px-auto flex flex-col mob:items-center">
-      <div className="flex items-center justify-center bg-stats-logo w-[80px] h-[80px] rounded-full translate-y-[-50%] desktop:ml-2">
+      <div className="StatImage flex items-center justify-center bg-stats-logo w-[80px] h-[80px] rounded-full translate-y-[-50%] desktop:ml-2">
         <img src={imgUrl} className="w-[40px] h-[40px]"></img>
       </div>
 
@@ -23,7 +23,7 @@ const StatisticContainer = () => {
         <p className="font-bold text-[48px] text-large-text mob:text-[32px]">
           Advanced Statistics
         </p>
-        <p className="text-[16px] text-Grayish-Violet">
+        <p className="text-[16px] text-Grayish-Violet desktop:px-[275px] mob:pb-8">
           Track how your links are performing across the web with our advanced
           statistics dashboard.
         </p>
