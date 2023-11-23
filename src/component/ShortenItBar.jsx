@@ -2,6 +2,7 @@ import clsx from "clsx";
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import bgShortenDesktop from "/images/bg-shorten-desktop.svg";
+import bgShortenMobile from "/images/bg-shorten-mobile.svg";
 
 const copyToClipboard = (link) => {
   navigator.clipboard.writeText(link);
@@ -11,18 +12,19 @@ const NewLinkBox = ({ original, newLink }) => {
   const [copied, setcopied] = useState(false);
 
   return (
-    <div className="flex justify-between rounded-[16px] items-center gap-4 py-4 px-6 translate-y-[-75px] mt-4 bg-white">
+    <div className="flex justify-between rounded-[16px] desktop:items-center gap-4 py-4 mob:px-4 desktop:px-6 translate-y-[-75px] mt-4 bg-white mob:flex-col">
       <a href={original} className="truncate">
         {original}
       </a>
-      <div className="flex max-w-[400px] items-center">
+      <div className="mobile-only bg-Gray w-full h-[1px]"></div>
+      <div className="flex max-w-[400px] desktop:items-center mob:flex-col mob:gap-4">
         <a href={newLink} className="text-sing-up truncate">
           {newLink}
         </a>
         <input
           type="button"
           className={clsx(
-            "transition-bg ml-4 py-2 px-8 rounded-[8px] text-white",
+            "transition-bg desktop:ml-4 py-2 mob:w-full px-8 rounded-[8px] text-white",
             copied
               ? "bg-fetching"
               : "bg-sing-up cursor-pointer hover:bg-sing-up-hover  "
@@ -81,13 +83,21 @@ const ShortenItBar = () => {
   };
   return (
     <>
-      <div className="relative flex items-center gap-4 h-[150px] rounded-[16px] translate-y-[-50%] overflow-hidden">
-        <img src={bgShortenDesktop} className="bg-shorten-link-box absolute" />
+      <div className="relative flex mob:flex-col items-center gap-4 h-[150px] mob:h-[200px] rounded-[16px] translate-y-[-50%] overflow-hidden">
+        <img
+          src={bgShortenDesktop}
+          className="desktop-only bg-shorten-link-box absolute"
+        />
+        <img
+          src={bgShortenMobile}
+          className="mobile-only bg-shorten-link-box absolute w-full"
+        />
+
         {/* input bar */}
         <input
           type="input"
           className={clsx(
-            "z-10 h-[60px] w-[100%] ml-10 pl-4 rounded-[12px]",
+            "z-10 h-[60px] w-[100%] rounded-[12px] desktop:ml-10 pl-4  m-4 mob:w-[90%]",
             hasError ? "outline outline-red-400 outline-3" : ""
           )}
           placeholder="Shorten a link here..."
@@ -101,7 +111,7 @@ const ShortenItBar = () => {
         <input
           type="button"
           className={clsx(
-            "transition-bg rounded-[16px] font-bold py-2 px-6 text-white z-10 mr-10 h-[60px] ",
+            "transition-bg rounded-[16px] font-bold py-2 px-6 text-white z-10 desktop:mr-10 h-[60px] mob:w-[90%]",
             isFetching
               ? "bg-fetching"
               : "bg-sing-up hover:bg-sing-up-hover cursor-pointer"
@@ -118,7 +128,7 @@ const ShortenItBar = () => {
           }}
         />
         {/* Error message */}
-        <span className="basis-auto absolute z-20 bottom-4 left-12 text-[16px] text-red-400 italic">
+        <span className="basis-auto absolute z-20 bottom-4 mob:bottom-20 left-12 mob:left-6 text-[16px] text-red-400 italic">
           {hasError ? errorType : ""}
         </span>
       </div>

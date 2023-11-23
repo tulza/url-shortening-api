@@ -5,6 +5,7 @@ export default {
   theme: {
     extend: {
       screens: {
+        desktop: "1101px",
         mob: { max: "1100px" },
       },
       transitionProperty: {
