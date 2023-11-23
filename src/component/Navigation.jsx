@@ -53,7 +53,7 @@ const NavMoblie = ({ isToggled }) => {
             <a href="#">Pricing</a>
             <a href="#">Resources</a>
             <div className="bg-Grayish-Violet h-[1px] w-full" />
-            <p>Login</p>
+            <a href="#">Login</a>
             <button className="button w-full">Sign Up</button>
           </div>
         </div>
