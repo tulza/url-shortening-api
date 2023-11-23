@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import shortlyLogo from "/images/logo.svg";
+import clsx from "clsx";
 // import mobileNav from "/image/";
 
 const Button = ({ label }) => {
@@ -34,19 +35,54 @@ const NavDesktop = () => {
   );
 };
 
-const NavMoblie = () => {
+const NavMoblie = ({ isToggled }) => {
   return (
     <>
-      <img src="" />
+      <div className="relative w-full mt-4">
+        <div
+          className={clsx(
+            "z-20 absolute overflow-hidden w-full bg-Dark-Violet rounded-[24px] transition-[height] duration-300",
+            isToggled ? "h-[400px]" : "h-[0px]"
+          )}
+        >
+          <div className="absolute w-[375px] flex flex-col items-center gap-[34px] p-8 text-white">
+            <p>Features</p>
+            <p>Pricing</p>
+            <p>Resources</p>
+            <div className="bg-Grayish-Violet h-[1px] w-full" />
+            <p>Login</p>
+            <button className="button w-full">Sign Up</button>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
+
 const Navigation = () => {
+  const [toggleMobNav, setToggleMobNav] = useState(false);
+
+  const handleMobNav = () => {
+    setToggleMobNav(!toggleMobNav);
+  };
+
   return (
-    <div className="flex flex-row">
-      <img src={shortlyLogo} className="h-full m-auto pr-8" />
-      <NavDesktop />
-    </div>
+    <>
+      <div className="flex flex-row justify-between">
+        <img src={shortlyLogo} className={clsx("h-full mob:m-auto pr-8")} />
+        <NavDesktop />
+        {/* mobile nav button */}
+        <button
+          className="flex flex-col gap-[5px] mobile-only"
+          onClick={handleMobNav}
+        >
+          <div className="w-[35px] h-[5px] bg-black" />
+          <div className="w-[35px] h-[5px] bg-black" />
+          <div className="w-[35px] h-[5px] bg-black" />
+        </button>
+      </div>
+      <NavMoblie isToggled={toggleMobNav} />
+    </>
   );
 };
 

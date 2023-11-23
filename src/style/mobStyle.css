@@ -3,7 +3,7 @@
     display: none;
   }
   .mobile-only {
-    display: static;
+    display: flex;
   }
 
   .section-container {
