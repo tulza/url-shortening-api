@@ -43,14 +43,11 @@ const ShortenItBar = () => {
   const [inputLink, setLink] = useState("");
   const [urlBlock, setUrlBlock] = useState(new Array());
   const [isFetching, setIsFetching] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const [errorType, setErrorType] = useState("");
 
   // handleAPI
   const handleShortenAPI = (link) => {
-    if (!link) {
-      setIsFetching(false);
-      return "Please add a link";
-    }
-
     fetch("https://corsproxy.io/?https://cleanuri.com/api/v1/shorten", {
       method: "POST",
       headers: {
@@ -71,23 +68,34 @@ const ShortenItBar = () => {
       })
       .catch((err) => {
         setIsFetching(false);
+        handleError("Invalid Link");
         console.log("invalid link :(");
       });
   };
 
+  const handleError = (errorType) => {
+    setHasError(true);
+    setErrorType(errorType);
+  };
   return (
     <>
       <div className="relative flex items-center gap-4 h-[150px] rounded-[16px] translate-y-[-50%] overflow-hidden">
         <img src={bgShortenDesktop} className="bg-shorten-link-box absolute" />
+        {/* input bar */}
         <input
           type="input"
-          className="z-10 h-[60px] w-[100%] ml-10 pl-4 rounded-[16px]"
+          className={clsx(
+            "z-10 h-[60px] w-[100%] ml-10 pl-4 rounded-[12px]",
+            hasError ? "outline outline-red-400 outline-3" : ""
+          )}
           placeholder="Shorten a link here..."
           value={inputLink}
           onChange={(e) => {
+            setHasError(false);
             setLink(e.target.value);
           }}
         />
+        {/* submit button */}
         <input
           type="button"
           className={clsx(
@@ -98,13 +106,21 @@ const ShortenItBar = () => {
           )}
           value={isFetching ? "Fetching" : "Shorten It!"}
           onClick={() => {
-            if (isFetching == false) {
+            if (!inputLink) {
+              handleError("Please add a link");
+            } else if (isFetching == false) {
+              setHasError(false);
               setIsFetching(true);
               handleShortenAPI(inputLink);
             }
           }}
         />
+        {/* Error message */}
+        <span className="basis-auto absolute z-20 bottom-4 left-12 text-[16px] text-red-400 italic">
+          {hasError ? errorType : ""}
+        </span>
       </div>
+      {/*box for every link shorten */}
       {urlBlock.map((url) => {
         return (
           <NewLinkBox
