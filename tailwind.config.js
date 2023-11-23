@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        mob: "1100px",
+        mob: { max: "1100px" },
       },
       transitionProperty: {
         height: "height",

@@ -9,4 +9,12 @@
   .section-container {
     @apply w-[375px];
   }
+
+  .mob-center {
+    text-align: center;
+    justify-self: center;
+  }
+  #intro {
+    @apply py-0 my-16 flex flex-col-reverse;
+  }
 }

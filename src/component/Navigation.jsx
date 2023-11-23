@@ -38,7 +38,7 @@ const NavDesktop = () => {
 const NavMoblie = ({ isToggled }) => {
   return (
     <>
-      <div className="relative w-full mt-4">
+      <div className="relative w-full mt-4 mobile-only">
         <div
           className={clsx(
             "z-20 absolute overflow-hidden w-full bg-Dark-Violet rounded-[24px] transition-[height] duration-300",
@@ -46,9 +46,9 @@ const NavMoblie = ({ isToggled }) => {
           )}
         >
           <div className="absolute w-[375px] flex flex-col items-center gap-[34px] p-8 text-white">
-            <p>Features</p>
-            <p>Pricing</p>
-            <p>Resources</p>
+            <a>Features</a>
+            <a>Pricing</a>
+            <a>Resources</a>
             <div className="bg-Grayish-Violet h-[1px] w-full" />
             <p>Login</p>
             <button className="button w-full">Sign Up</button>
@@ -69,7 +69,7 @@ const Navigation = () => {
   return (
     <>
       <div className="flex flex-row justify-between">
-        <img src={shortlyLogo} className={clsx("h-full mob:m-auto pr-8")} />
+        <img src={shortlyLogo} className={clsx("h-full m-auto pr-8 mob:m-0")} />
         <NavDesktop />
         {/* mobile nav button */}
         <button
