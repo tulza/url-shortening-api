@@ -67,3 +67,7 @@ body {
   @apply py-2 px-6 rounded-full text-white bg-sing-up hover:bg-sing-up-hover;
   font-weight: 700;
 }
+
+.mobile-only {
+  display: none;
+}

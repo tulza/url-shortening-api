@@ -11,10 +11,12 @@ const NewLinkBox = ({ original, newLink }) => {
   const [copied, setcopied] = useState(false);
 
   return (
-    <div className="flex justify-between rounded-[16px] items-center py-4 px-6 translate-y-[-75px] mt-4 bg-white">
-      <a href={original}>{original}</a>
-      <div>
-        <a href={newLink} className="text-sing-up">
+    <div className="flex justify-between rounded-[16px] items-center gap-4 py-4 px-6 translate-y-[-75px] mt-4 bg-white">
+      <a href={original} className="truncate">
+        {original}
+      </a>
+      <div className="flex max-w-[400px] items-center">
+        <a href={newLink} className="text-sing-up truncate">
           {newLink}
         </a>
         <input
@@ -32,7 +34,7 @@ const NewLinkBox = ({ original, newLink }) => {
               setcopied(false);
             }, 500);
           }}
-          value={copied ? "Copied" : "Copy"}
+          value={copied ? "Copied!" : "Copy"}
         />
       </div>
     </div>
