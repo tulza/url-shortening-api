@@ -14,14 +14,13 @@ const PageIntro = () => {
             links are performing.
           </p>
           <div className="flex mob:justify-center">
-            <button href="#" className="button mob:px-10">
-              Get Started
-            </button>
+            <button className="button mob:px-10">Get Started</button>
           </div>
         </div>
         <img
           src={workingIllusSvg}
           className="translate-x-[30%] mob:translate-x-[20%] mob:scale-[1.5] mob:py-16"
+          alt="person working illustration SVG"
         />
       </div>
     </>

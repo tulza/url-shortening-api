@@ -7,7 +7,11 @@ const AspectBox = ({ aspectLabel, details, imgUrl }) => {
   return (
     <div className="Aspect-box bg-white px-6 pb-4 rounded-lg px-auto flex flex-col mob:items-center">
       <div className="StatImage flex items-center justify-center bg-stats-logo w-[80px] h-[80px] rounded-full translate-y-[-50%] desktop:ml-2">
-        <img src={imgUrl} className="w-[40px] h-[40px]"></img>
+        <img
+          src={imgUrl}
+          className="w-[40px] h-[40px]"
+          alt={aspectLabel + " logo"}
+        />
       </div>
 
       <p className="font-bold text-[20px] text-large-text">{aspectLabel}</p>

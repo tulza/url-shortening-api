@@ -69,16 +69,20 @@ const Navigation = () => {
   return (
     <>
       <div className="flex flex-row justify-between">
-        <img src={shortlyLogo} className={clsx("h-full m-auto pr-8 mob:m-0")} />
+        <img
+          src={shortlyLogo}
+          className={clsx("h-full m-auto pr-8 mob:m-0")}
+          alt="shortly logo"
+        />
         <NavDesktop />
         {/* mobile nav button */}
         <button
           className="flex flex-col gap-[5px] mobile-only"
           onClick={handleMobNav}
         >
-          <div className="w-[35px] h-[5px] bg-black" />
-          <div className="w-[35px] h-[5px] bg-black" />
-          <div className="w-[35px] h-[5px] bg-black" />
+          <span className="w-[35px] h-[5px] bg-black" />
+          <span className="w-[35px] h-[5px] bg-black" />
+          <span className="w-[35px] h-[5px] bg-black" />
         </button>
       </div>
       <NavMoblie isToggled={toggleMobNav} />

@@ -87,15 +87,16 @@ const ShortenItBar = () => {
         <img
           src={bgShortenDesktop}
           className="desktop-only bg-shorten-link-box absolute"
+          alt="background image of shorten link box"
         />
         <img
           src={bgShortenMobile}
           className="mobile-only bg-shorten-link-box absolute w-full"
+          alt="background image of shorten link box"
         />
 
         {/* input bar */}
         <input
-          type="input"
           className={clsx(
             "z-10 h-[60px] w-[100%] rounded-[12px] desktop:ml-10 pl-4  m-4 mob:w-[90%]",
             hasError ? "outline outline-red-400 outline-3" : ""

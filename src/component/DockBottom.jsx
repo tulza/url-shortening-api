@@ -8,10 +8,12 @@ const DockBottom = () => {
       <img
         src={boostDesktopSvg}
         className="desktop-only bg-shorten-link-box h-full w-full absolute"
+        alt="boost background image"
       />
       <img
         src={boostMobileSvg}
         className="mobile-only bg-shorten-link-box h-full w-full absolute"
+        alt="boost background image"
       />
       <p className="z-10 text-white font-bold text-[40px] mob:text-[24px] py-4">
         Boost your links today
