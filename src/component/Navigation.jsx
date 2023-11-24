@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import shortlyLogo from "/images/logo.svg";
+import { shortlyLogo } from "./imageComponent";
+
 import clsx from "clsx";
 // import mobileNav from "/image/";
 

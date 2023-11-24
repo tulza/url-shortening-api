@@ -1,5 +1,5 @@
 import React from "react";
-import workingIllusSvg from "/images/illustration-working.svg";
+import { workingIllusSvg } from "./imageComponent";
 
 const PageIntro = () => {
   return (

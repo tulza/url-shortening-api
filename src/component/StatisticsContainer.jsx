@@ -1,7 +1,9 @@
 import React from "react";
-import recognitionIcon from "/images/icon-brand-recognition.svg";
-import recordsIcon from "/images/icon-detailed-records.svg";
-import customizableIcon from "/images/icon-fully-customizable.svg";
+import {
+  recognitionIcon,
+  recordsIcon,
+  customizableIcon,
+} from "./imageComponent";
 
 const AspectBox = ({ aspectLabel, details, imgUrl }) => {
   return (
@@ -34,6 +36,7 @@ const StatisticContainer = () => {
       </div>
       <div>
         <div className="flex relative items-center justify-center py-16 pb-32 mob:pb-24 ">
+          {/* line */}
           <div className="desktop-only bg-grid-line h-[8px] w-[75%] absolute" />
           <div className="mobile-only bg-grid-line h-[75%] w-[8px] absolute" />
           <div id="statistic-grid" className="z-10">

@@ -1,6 +1,5 @@
 import React from "react";
-import boostDesktopSvg from "/images/bg-boost-desktop.svg";
-import boostMobileSvg from "/images/bg-boost-mobile.svg";
+import { boostDesktopSvg, boostMobileSvg } from "./imageComponent";
 
 const DockBottom = () => {
   return (

@@ -1,10 +1,11 @@
 import React from "react";
-import whiteShortly from "/images/logo-white.svg";
-import facebookIcon from "/images/icon-facebook.svg";
-import twitterIcon from "/images/icon-twitter.svg";
-import pinterestIcon from "/images/icon-pinterest.svg";
-import instagramIcon from "/images/icon-instagram.svg";
-
+import {
+  whiteShortly,
+  facebookIcon,
+  twitterIcon,
+  pinterestIcon,
+  instagramIcon,
+} from "./imageComponent";
 const FooterLinks = () => {
   return (
     <>

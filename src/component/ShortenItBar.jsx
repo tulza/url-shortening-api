@@ -1,8 +1,7 @@
 import clsx from "clsx";
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import bgShortenDesktop from "/images/bg-shorten-desktop.svg";
-import bgShortenMobile from "/images/bg-shorten-mobile.svg";
+import { bgShortenDesktop, bgShortenMobile } from "./imageComponent";
 
 const copyToClipboard = (link) => {
   navigator.clipboard.writeText(link);
