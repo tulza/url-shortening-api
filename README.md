@@ -1,8 +1,9 @@
-# React + Vite
+# URL shortening app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Recreation website of url-shortening app from front-end mentor:
+[challenge link](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G/hub)
+[my re-creation link](https://tulza.github.io/url-shortening-api/)
 
-Currently, two official plugins are available:
+made with:
+React, Framer motion, Javascript, and HTML/CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
